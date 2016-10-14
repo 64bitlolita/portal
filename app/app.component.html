@@ -1,0 +1,31 @@
+<h1>First Draft</h1>
+
+<li *ngFor="let listing of listings"  (click)="onClick(listing)">
+    <span>{{listing.id}}</span> {{listing.address}}
+</li>
+
+<div *ngIf="selectedListing">
+<h2>Selected Listing</h2>
+<div>
+    <label>ID: </label>{{selectedListing.id}}
+</div>
+<div>
+    <label>MLS: </label>{{selectedListing.mlsNum}}
+    <!--<input [(ngModel)]="selectedListing.address" />-->
+    <input [(ngModel)]="selectedListing.address" placeholder="address"/>
+</div>
+</div>
+<!--<div>
+    <nav class='navbar navbar-default'>
+        <div class='container-fluid'>
+            <a class='navbar-brand'>{{pageTitle}}</a>
+            <ul class='nav navbar-nav'>
+                <li><a [routerLink]="['Welcome']">Home</a></li>
+                <li><a [routerLink]="['Products']">Product List</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class='container'>
+        <router-outlet></router-outlet>
+    </div>
+</div>-->
